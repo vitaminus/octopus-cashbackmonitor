@@ -2,8 +2,8 @@ require 'nokogiri'
 require 'open-uri'
 
 module Octopus
-  module Scraps
-    class Cashbackmonitor < Scrap
+  module Scrapers
+    class Cashbackmonitor < Scraper
       namespace :cashbackmonitor
 
       def initialize(robot)
@@ -43,7 +43,7 @@ module Octopus
         result
       end
 
-      Octopus.register_scrap(:cashbackmonitor, self)
+      Octopus.register_adapter(:cashbackmonitor, self)
     end
   end
 end
